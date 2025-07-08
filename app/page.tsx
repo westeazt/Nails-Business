@@ -1,19 +1,20 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center h-screen overflow-y-scroll p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <div className="text-center sm:text-left">
-          <h1 className="text-4xl font-bold mb-4">Lash Store</h1>
+          <h1 className="text-4xl font-bold mb-4">YVD NAILS</h1>
           <p className="text-lg text-gray-600">Premium Eyelashes for Every Occasion</p>
         </div>
 
         <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
           <h2 className="text-xl font-semibold mb-3 text-blue-800">Development Tools</h2>
           <div className="space-y-2">
-            <Link 
+            <Link
               href="/test-firebase"
               className="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
             >
@@ -112,6 +113,13 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
+      <Link
+        href="/terms"
+        className="text-blue-600 hover:underline"
+      >
+        Terms and Conditions
+      </Link>
     </div>
+
   );
 }
