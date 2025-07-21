@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header"; // We will add this back
+import Footer from "./components/Footer"; // We will add this back
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lash Store - Premium Eyelashes",
-  description: "Premium quality eyelashes for every occasion",
+  title: "YVD NAILS - Premium Nail & Lash Artistry",
+  description: "Your destination for premium manicures, pedicures, and eyelash extensions.",
 };
 
 export default function RootLayout({
@@ -16,8 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      {/* These CSS classes help keep the footer at the bottom of the page */}
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <Header />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
